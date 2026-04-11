@@ -1,0 +1,12 @@
+!YS-v0
+
+defn score(x y):
+  # Get Distance
+  dist =: sqrt((x * x)+(y * y))
+
+  # Show Points
+  cond:
+    dist > 10: 0
+    dist > 5: 1
+    dist > 1: 5
+    else: 10
