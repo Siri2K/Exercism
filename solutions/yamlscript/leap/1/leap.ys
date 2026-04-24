@@ -1,0 +1,6 @@
+!yamlscript/v0
+
+defn leap-year(year):
+  or:
+    (rem(year, 400) == 0)
+    (and (rem(year, 4) == 0) (not (rem(year, 100) == 0)))
