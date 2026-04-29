@@ -1,0 +1,13 @@
+!YS-v0
+
+defn prime(n):
+  if (n < 1): die("n must be at least 1")
+  loop [num 2, cnt 0]:
+    (if is-prime(num)
+      (if (inc(cnt) == n) num (recur (inc num) (inc cnt)))
+      (recur (inc num) cnt))
+
+defn- is-prime(n):
+  (if (n < 4) (n > 1)
+    (if (rem(n 2) == 0) false
+      (range 3 (inc (int (sqrt n))) 2).every?(\(rem(n %1) != 0))))
